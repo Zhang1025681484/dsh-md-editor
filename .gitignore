@@ -1,0 +1,13 @@
+# 本包没有运行时依赖，正常不会出现 node_modules
+node_modules/
+
+# 插件运行时会写这个调试信标文件（见 README「调试信标」）
+.client-beacon.log
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.tgz

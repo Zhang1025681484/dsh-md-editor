@@ -1,0 +1,61 @@
+{
+  "name": "dsh-md-editor",
+  "version": "1.0.0",
+  "description": "Editable Markdown tab for the DeepSeek Harness right sidebar — open a .md in the workspace file tree and edit / save it in place (Monaco + autosave).",
+  "type": "module",
+  "license": "MIT",
+  "author": "Zhang1025681484",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhang1025681484/dsh-md-editor.git"
+  },
+  "homepage": "https://github.com/Zhang1025681484/dsh-md-editor#readme",
+  "bugs": "https://github.com/Zhang1025681484/dsh-md-editor/issues",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "monaco.js",
+    "parse.js",
+    "cordis.patch.yml",
+    "vendor",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md",
+    "README.md",
+    "README.zh.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "markdown",
+    "editor",
+    "monaco",
+    "sidebar"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-workspace-files"
+      ]
+    }
+  },
+  "meta": {
+    "title": "Markdown Editor",
+    "description": "Edit and save workspace .md files right in the right sidebar"
+  }
+}

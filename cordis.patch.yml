@@ -1,0 +1,10 @@
+# Host row inserted by the dsh-md-editor bundle.
+#
+# The host half does two things:
+#   1. serves Monaco 0.52.2 assets from ./vendor over /api/md-editor/monaco (same-origin, no CDN)
+#   2. registers the /md-save command that the browser half calls to write content back to disk
+#      (the browser side can only read: remote.workspaceFiles has no write operation)
+- insert:
+    - id: md-editor
+      name: dsh-md-editor
+      config: {}
